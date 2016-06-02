@@ -1,0 +1,41 @@
+{
+  "name": "changes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-clean-css": "^2.0.3",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-prettify": "^0.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-sass-glob": "^1.0.5",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-sprite": "^1.2.19",
+    "gulp-svg2png": "^1.0.0",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-uglify": "^1.5.1",
+    "gulp-watch": "^4.3.5",
+    "gulp.spritesmith": "^6.0.0",
+    "install": "^0.6.1",
+    "jshint": "^2.8.0",
+    "npm": "^3.8.2",
+    "yargs": "^3.31.0"
+  }
+}

@@ -1,0 +1,15 @@
+include ../../components/footer/footer
+include ../../components/header/header
+
+doctype html
+block vars
+html
+	include ../blocks/head
+	body
+		.page
+			+header()
+			main.main
+				block main
+			+footer()
+		include ../blocks/scripts
+		block local-scripts

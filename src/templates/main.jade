@@ -1,0 +1,10 @@
+extends layouts/layout
+include ../components/change-time/change-time
+include ../components/advantages/advantages
+
+block vars
+	- var title = 'Главная';
+
+block main
+	+change-time()
+	+advantages()

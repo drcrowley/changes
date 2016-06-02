@@ -1,0 +1,27 @@
+.change-time {
+	background: url(../images/change-time.jpg) 50% 100% no-repeat;
+	min-height: 985px;
+	&__holder {
+		padding-top: 130px;
+		padding-bottom: 130px;
+		@include container;
+	}
+	&__description {
+		color: #fff;
+		text-transform: uppercase;
+	}
+	&__description + &__description {
+		margin-top: 30px;
+	}
+	&__text {
+		font-size: 33px;
+		font-weight: 400;
+	}
+	&__title {
+		font-size: 46px;
+		font-weight: 700;
+	}
+	&__wrapper {
+		width: 438px;
+	}
+}

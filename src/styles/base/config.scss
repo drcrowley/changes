@@ -1,0 +1,19 @@
+// color vars
+$yellow-color: #ffe400;
+$red-color: #d8423a;
+
+// grid vars
+$gutter-width: 0px;
+$total-width: 100%;
+
+// font
+$font-family-base: 'Arial', 'Helvetica', sans-serif;
+
+$roboto: 'Roboto', $font-family-base;
+
+
+$breakpoints: (
+  small: (max-width: 736px),
+  medium: (max-width: 1024px),
+  wide: (max-width: 1200px)
+);

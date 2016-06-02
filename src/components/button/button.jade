@@ -1,0 +1,9 @@
+mixin button(text, type)
+	- var type = (type == 'link') ? type : 'button'
+
+	if type == 'link'
+		a.button&attributes(attributes)
+			| #{text}
+	else
+		button.button&attributes(attributes)
+			| #{text}

@@ -1,0 +1,5 @@
+include ../main-menu/main-menu
+mixin header()
+	header.header&attributes(attributes)
+		.header__holder
+			+main-menu(["Начало", "Наши цели", "Как это работает", "Подбор программы", "Личные задания", "Достижение цели", "Стоимость"], 1)

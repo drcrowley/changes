@@ -1,0 +1,15 @@
+include ../help/help
+include ../button/button
+
+mixin change-time()
+	.change-time&attributes(attributes)
+		.change-time__holder
+			.change-time__description
+				h3.change-time__text Игровой мотивационный сервис
+				h2.change-time__title   &#171;Время Перемен&#187;
+			.change-time__description
+				h3.change-time__text Представляет новые программы серии
+				h2.change-time__title   &#171;Здоровое тело&#187;
+			.change-time__wrapper
+				+help(['Сбросить вес', 'Подтянуть тело', 'Придать красивый рельеф', 'Преодолеть лень'])
+				+button('Получить бесплатный доступ на 3 дня', 'link')(href="#")

@@ -1,0 +1,50 @@
+@mixin font-face($name, $filename, $path, $weight:normal, $style:normal) {
+  @font-face {
+    font-family: $name;
+    src: url($path + $filename + '.eot');
+    src: local('☺'), url($path + $filename + '.woff') format('woff'), url($path + $filename + '.ttf') format('truetype'), url($path + $filename + '.svg#' + $filename) format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin clearfix() {
+  *zoom:1;
+
+  &:before,
+  &:after {
+      content:"";
+      display:table;
+  }
+  &:after {
+      clear:both;
+  }
+}
+
+@mixin container() {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+@mixin breakpoint($name) {
+  @if not map-has-key($breakpoints, $name) {
+    @warn "Warning: `#{$name}` is not a valid breakpoint name.";
+  } @else {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+}
+
+.icon {
+  position: relative;
+  text-indent: 100%;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@include sprites($spritesheet-sprites);

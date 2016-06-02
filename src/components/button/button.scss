@@ -1,0 +1,14 @@
+.button {
+	border-radius: 27px;
+	background: $yellow-color;
+	padding: 20px 35px 17px 35px;
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
+	font-size: 17px;
+	border-bottom: 3px solid #b8a400;
+	&_inline {
+		display: inline-block;
+		vertical-align: top;
+	}
+}

@@ -1,0 +1,9 @@
+mixin help(list)
+	fieldset.help&attributes(attributes)
+		legend.help__title Поможем
+		ul.help__list
+			each item, index in list
+				li.help__item
+					a(href="#").help__link
+						i.icon.icon_check.help__icon
+						| #{item}

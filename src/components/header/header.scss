@@ -1,0 +1,12 @@
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	background: #eee;
+	background: rgba(0, 0, 0, .3);
+	z-index: 10;
+	&__holder {
+		@include container;
+	}
+}
