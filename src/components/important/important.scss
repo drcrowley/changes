@@ -1,0 +1,25 @@
+.important {
+	background: $red-color;
+	font-weight: 700;
+	display: inline-block;
+	position: relative;
+	padding: 4px 10px;
+	margin-left: 13px;
+	margin-right: 13px;
+	&:after, &:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		border-style: solid;
+	}
+	&:after {
+		left: 100%;
+		border-width: 54px 13px 0 0;
+		border-color: $red-color transparent transparent transparent;
+	}
+	&:before {
+		right: 100%;
+		border-width: 0 0 54px 13px;
+		border-color: transparent transparent $red-color  transparent;		
+	}
+}

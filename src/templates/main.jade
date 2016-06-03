@@ -1,6 +1,7 @@
 extends layouts/layout
 include ../components/change-time/change-time
 include ../components/advantages/advantages
+include ../components/how-it-works/how-it-works
 
 block vars
 	- var title = 'Главная';
@@ -8,3 +9,4 @@ block vars
 block main
 	+change-time()
 	+advantages()
+	+how-it-works()
