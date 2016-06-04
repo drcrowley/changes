@@ -1,0 +1,51 @@
+include ../button/button
+
+mixin weight-form()
+	form.weight-form&attributes(attributes)
+		.weight-form__title Узнайте БЕСПЛАТНО свой идеальный вес. Внесите свои данные
+		.weight-form__row
+			.weight-form__column.weight-form__column_3
+				.weight-form__field
+					.weight-form__icon
+						i.icon.icon_person
+					input(type="name", placeholder="Ваше имя").weight-form__input
+			.weight-form__column.weight-form__column_3
+				.weight-form__field
+					.weight-form__icon
+						i.icon.icon_email
+					input(type="email", placeholder="Email").weight-form__input
+			.weight-form__column.weight-form__column_3
+				.weight-form__field
+					.weight-form__icon
+						i.icon.icon_weight
+					input(type="text", placeholder="Ваш вес").weight-form__input
+			.weight-form__column.weight-form__column_3
+				.weight-form__field
+					.weight-form__icon
+						i.icon.icon_height
+					input(type="text", placeholder="Ваш рост").weight-form__input
+		fieldset.weight-form__fieldset
+			.weight-form__row
+				.weight-form__column.weight-form__column_checkbox
+					.weight-form__row
+						.weight-form__column.weight-form__column_sport
+							.weight-form__checkbox
+								input(type="checkbox", id="checkbox-sport", name="weight").weight-form__checkbox-input
+								label(for="checkbox-sport").weight-form__checkbox-label Занимайтесь спортом (Регулярно)
+						.weight-form__column.weight-form__column_age
+							.weight-form__checkbox
+								input(type="checkbox", id="checkbox-age", name="weight").weight-form__checkbox-input
+								label(for="checkbox-age").weight-form__checkbox-label Старше 40 лет
+						.weight-form__column.weight-form__column_birth
+							.weight-form__checkbox
+								input(type="checkbox", id="checkbox-birth", name="weight").weight-form__checkbox-input
+								label(for="checkbox-birth").weight-form__checkbox-label Беременны или были роды менее 6 месяцев назад?
+				.weight-form__column.weight-form__column_select
+					.weight-form__figure
+						.weight-form__figure-label Тип фигуры
+						.weight-form__figure-field
+							select.weight-form__select
+								option Астенический (тонкокостный) Окружность запястья до 16 см.
+								option Астенический (тонкокостный) Окружность запястья до 20 см.
+		.weight-form__button
+			+button('Узнать свой идеальный вес', 'button')(type="submit").button_inline

@@ -2,11 +2,15 @@ extends layouts/layout
 include ../components/change-time/change-time
 include ../components/advantages/advantages
 include ../components/how-it-works/how-it-works
+include ../components/programs/programs
+include ../components/tasks/tasks
 
 block vars
-	- var title = 'Главная';
+	- var title = 'Время перемен';
 
 block main
 	+change-time()
 	+advantages()
 	+how-it-works()
+	+programs()
+	+tasks()

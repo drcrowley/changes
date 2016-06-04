@@ -6,9 +6,18 @@
 	display: block;
 	text-align: center;
 	font-size: 17px;
+	border: 0;
 	border-bottom: 3px solid #b8a400;
 	font-weight: 700;
 	color: #000;
+	&:hover {
+		color: #000;
+		background: darken($yellow-color, 2%);
+	}
+	&:focus, &:active {
+		border: 0;
+		color: #000;
+	}
 	&_inline {
 		display: inline-block;
 		vertical-align: top;

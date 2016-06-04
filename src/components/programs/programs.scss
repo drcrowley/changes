@@ -1,0 +1,22 @@
+.programs {
+	background: url(../images/programs.jpg) 50% 100% no-repeat;
+	height: 653px;
+	&__holder {
+		@include container;
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+	&__title {
+		font-size: 33px;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 33px;		
+	}
+	&__text {
+		text-align: center;
+		font-size: 22px;
+		font-weight: 300;
+	}
+
+}

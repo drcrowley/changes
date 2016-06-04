@@ -1,0 +1,42 @@
+.tasks {
+	background: url(../images/tasks.jpg) 50% 100% no-repeat;
+	&__holder {
+		@include container;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		box-sizing: border-box;
+		height: 1320px;
+		position: relative;
+	}
+	&__title {
+		font-size: 33px;
+		text-align: center;
+		margin-bottom: 22px;
+	}
+	&__text {
+		text-align: center;
+		font-size: 22px;
+		font-weight: 300;
+	}
+	&__button {
+		width: 550px;
+		margin: 0 auto;
+	}
+	&__list {
+		height: 855px;
+		position: relative;
+		margin-top: 40px;
+	}
+	&__label {
+		font-size: 22px;
+		font-weight: 700;
+		color: $yellow-color;
+	}
+	&__description {
+		font-size: 16px;
+	}
+	&__item {
+		text-align: center;
+	}	
+}
+

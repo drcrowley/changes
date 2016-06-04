@@ -1,0 +1,14 @@
+include ../button/button
+
+mixin tasks()
+	.tasks&attributes(attributes)
+		.tasks__holder
+			h2.tasks__title
+				strong.important Задания
+			.tasks__text Только комплексный подход, который мы используем, поможет<br> получить и красивое и здоровое тело
+			.tasks__list
+				.tasks__item.tasks__item_one
+					.tasks__label Сбалансированное питание
+					.tasks__description Пример задания: сегодня 5 разовое питание с интервалом 3 часа, блюда из нашего меню (калории мы посчитали за Вас!). 
+			.tasks__button
+				+button('Узнать свой идеальный вес', 'link')(href="#")
