@@ -1,0 +1,11 @@
+include ../button/button
+
+mixin action()
+	.action&attributes(attributes)
+		.action__holder
+			h2.action__title
+				strong.important.important_light-red НЕ ТЕРЯЙТЕ ВРЕМЯ!
+			.action__text РИСКУЙТЕ, СОВЕРШАЙТЕ БЕЗУМНЫЕ ПОСТУПКИ, ЖИВИТЕ В УДОВОЛЬСТВИЕ,<br> И БУДЬТЕ ВСЕГДА ГОТОВЫ К ПЕРЕМЕНАМ!
+			.action__description Более 70% женщин, которые начинают работать над своим телом – срываются в первый месяц. У нас – менее 25%
+			.action__button
+				+button('действовать сейчас!', 'link')(href="#").button_light-red.button_inline

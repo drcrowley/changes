@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin tasks()
-	.tasks&attributes(attributes)
+	section.tasks&attributes(attributes)
 		.tasks__holder
 			h2.tasks__title
 				strong.important Задания
@@ -9,6 +9,25 @@ mixin tasks()
 			.tasks__list
 				.tasks__item.tasks__item_one
 					.tasks__label Сбалансированное питание
-					.tasks__description Пример задания: сегодня 5 разовое питание с интервалом 3 часа, блюда из нашего меню (калории мы посчитали за Вас!). 
+					.tasks__description Пример задания: сегодня 5 разовое питание с интервалом 3 часа, блюда из нашего меню <br>(калории мы посчитали за Вас!).
+				.tasks__item.tasks__item_two
+					.tasks__label Физические нагрузки
+					.tasks__description Пример задания: проведите<br> тренировку дома, 30 минут,<br> упражнения для Вас в видео по<br> ссылке.
+				.tasks__item.tasks__item_three
+					.tasks__label Соблюдение режима
+					.tasks__description Пример задания: за 30 минут до сна принять ванну, проветрить<br> спальню, спать 7-8 часов.
+				.tasks__item.tasks__item_four
+					.tasks__label Психологический настрой
+					.tasks__description Пример задания: посмотреть во время завтрака, подготовленное нами вдохновляющее видео
+				.tasks__item.tasks__item_five
+					.tasks__label Самомассаж
+					.tasks__description Пример задания: сделать самомассаж живота механическим массажером, 15 минут. Смотрите наше обучающее<br> видео здесь.					
+				.tasks__item.tasks__item_six
+					.tasks__label Очищение организма
+					.tasks__description Пример задания: выпить в течение дня 1 литр имбирного чая, приготовленного по нашему рецепту
+				.tasks__item.tasks__item_seven
+					.tasks__label Соблюдение водного баланса
+					.tasks__description Пример задания: выпить сразу после пробуждения 1 стакан воды + еще 5 стаканов до 19.00			
 			.tasks__button
-				+button('Узнать свой идеальный вес', 'link')(href="#")
+				+button('Узнать свой идеальный вес', 'link')(href="#programs").scroll-button
+			.tasks__notification Напомним по SMS и E-mail о том, что необходимо выполнить задания

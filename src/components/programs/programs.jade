@@ -1,8 +1,8 @@
 include ../weight-form/weight-form
 
 mixin programs()
-	.programs&attributes(attributes)
+	section.programs&attributes(attributes)
 		.programs__holder
 			h2.programs__title Подберем подходящую именно  <strong class="important">Вам программу</strong>
 			.programs__text Расскажите о себе, мы вычислим Ваш идеальный вес и предложим программу, <br>которая позволит его достичь
-			+weight-form()
+			+weight-form('1')

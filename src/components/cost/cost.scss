@@ -1,0 +1,77 @@
+.cost {
+	background: url(../images/cost.jpg) 50% 100% no-repeat;
+	height: 916px;
+	// padding-top: 60px;
+	// padding-bottom: 60px;
+	// box-sizing: border-box;	
+	&__holder {
+		@include container;
+	}
+	&__title {
+		font-size: 33px;
+		text-align: center;
+		margin-bottom: 22px;
+		text-transform: uppercase;
+	}
+	&__text {
+		text-align: center;
+		font-size: 24px;
+		font-weight: 300;
+		margin-bottom: 70px;
+		text-transform: uppercase;
+	}
+	&__list {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		padding-bottom: 55px;
+		counter-reset: count;
+	}
+	&__item {
+		background: rgba(0, 0, 0, .3);
+		border-bottom: 2px solid $yellow-color;
+		font-size: 22px;
+		line-height: 1.3;
+		display: table;
+		position: relative;
+		&:before {
+			counter-increment: count;
+			content: '0'counter(count);
+			font-size: 120px;
+			text-align: right;
+			font-weight: 300;
+			opacity: 0.1; 
+			position: absolute;
+			right: 0; 
+			top: -65px;
+		} 
+		&_one:before {
+			right: -25px;
+		}
+		&_two:before {
+			right: -4px;
+		}
+		&_three:before {
+			right: -6px;
+		}			
+	}
+	&__description {
+		display: table-cell;
+		vertical-align: middle;
+		height: 110px;
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
+	&__row {
+		@include clearfix;
+		margin-right: -30px;
+		margin-left: -30px;
+	}
+	&__column {
+		padding-left: 30px;
+		padding-right: 30px;
+		box-sizing: border-box;
+		@include column(3.5);
+		&_middle {
+			@include column(5);
+		}
+	}
+}

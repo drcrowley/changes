@@ -1,0 +1,100 @@
+.purpose {
+	background: url(../images/purpose.jpg) 50% 100% no-repeat;
+	height: 921px;
+	&__holder {
+		@include container;
+		padding-top: 50px;
+		padding-bottom: 50px;		
+	}
+	&__title {
+		font-size: 33px;
+		font-weight: 300;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+	&__text {
+		text-align: center;
+		font-size: 22px;
+		font-weight: 300;
+	}
+	&__list {
+		margin-top: 50px;
+	}
+	&__row {
+		@include clearfix();
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+	&__column {
+		@include column(4);
+		padding-left: 25px;
+		padding-right: 25px;
+		box-sizing: border-box;
+	}
+	&__item {
+		background: #fff;
+		color: #000;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 0;
+			border: 1px solid rgba(255, 255, 255, .2);
+			transform: translate(20px, -20px);
+		}
+	}
+	&__label {
+		font-size: 28px;
+		font-weight: 700;
+		padding: 15px 40px 20px 40px;
+		color: $red-color;
+		white-space: nowrap;
+		position: relative;
+		z-index: 2;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 4px;
+			background: $red-color;
+			transform: skewY(-3deg);
+		}		
+	}
+	&__detail {
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 700;
+		background: #f3f3f3;
+		display: block;
+		color: $red-color;
+		text-align: center;
+		padding: 14px 20px;
+		z-index: 2;
+		position: relative;
+		transition: all 0.2s;
+		&:hover {
+			color: #000;
+			background: $yellow-color;
+		}
+	}
+	&__description {
+		padding: 25px 40px;
+		font-size: 16px;
+		z-index: 2;
+		position: relative;
+		p {
+			margin: 0;
+		}
+		p + p {
+			margin-top: 1em;
+		}
+	}
+}

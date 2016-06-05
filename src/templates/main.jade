@@ -4,13 +4,21 @@ include ../components/advantages/advantages
 include ../components/how-it-works/how-it-works
 include ../components/programs/programs
 include ../components/tasks/tasks
+include ../components/purpose/purpose
+include ../components/creators/creators
+include ../components/cost/cost
+include ../components/action/action
 
 block vars
 	- var title = 'Время перемен';
 
 block main
-	+change-time()
-	+advantages()
-	+how-it-works()
-	+programs()
-	+tasks()
+	+change-time().waypoints#change-time
+	+advantages().waypoints#advantages
+	+how-it-works().waypoints#how-it-works
+	+programs().waypoints#programs
+	+tasks().waypoints#tasks
+	+purpose().waypoints#purpose
+	+creators().waypoints#creators
+	+cost().waypoints#cost
+	+action().waypoints#action

@@ -6,6 +6,7 @@
 	padding: 4px 10px;
 	margin-left: 13px;
 	margin-right: 13px;
+	color: #fff;
 	&:after, &:before {
 		content: '';
 		position: absolute;
@@ -20,6 +21,26 @@
 	&:before {
 		right: 100%;
 		border-width: 0 0 54px 13px;
-		border-color: transparent transparent $red-color  transparent;		
+		border-color: transparent transparent $red-color transparent;		
 	}
+	&_yellow {
+		background: $yellow-color;
+		color: #000;
+		&:after {
+			border-color: $yellow-color transparent transparent transparent;
+		}
+		&:before {
+			border-color: transparent transparent $yellow-color transparent;	
+		}
+	}
+	&_light-red {
+		background: #e73914;
+		color: #fff;
+		&:after {
+			border-color: #e73914 transparent transparent transparent;
+		}
+		&:before {
+			border-color: transparent transparent #e73914 transparent;	
+		}
+	}	
 }

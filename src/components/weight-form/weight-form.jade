@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin weight-form()
+mixin weight-form(index)
 	form.weight-form&attributes(attributes)
 		.weight-form__title Узнайте БЕСПЛАТНО свой идеальный вес. Внесите свои данные
 		.weight-form__row
@@ -30,16 +30,16 @@ mixin weight-form()
 					.weight-form__row
 						.weight-form__column.weight-form__column_sport
 							.weight-form__checkbox
-								input(type="checkbox", id="checkbox-sport", name="weight").weight-form__checkbox-input
-								label(for="checkbox-sport").weight-form__checkbox-label Занимайтесь спортом (Регулярно)
+								input(type="checkbox", id="checkbox-sport-#{index}", name="weight-#{index}").weight-form__checkbox-input
+								label(for="checkbox-sport-#{index}").weight-form__checkbox-label Занимайтесь спортом (Регулярно)
 						.weight-form__column.weight-form__column_age
 							.weight-form__checkbox
-								input(type="checkbox", id="checkbox-age", name="weight").weight-form__checkbox-input
-								label(for="checkbox-age").weight-form__checkbox-label Старше 40 лет
+								input(type="checkbox", id="checkbox-age-#{index}", name="weight-#{index}").weight-form__checkbox-input
+								label(for="checkbox-age-#{index}").weight-form__checkbox-label Старше 40 лет
 						.weight-form__column.weight-form__column_birth
 							.weight-form__checkbox
-								input(type="checkbox", id="checkbox-birth", name="weight").weight-form__checkbox-input
-								label(for="checkbox-birth").weight-form__checkbox-label Беременны или были роды менее 6 месяцев назад?
+								input(type="checkbox", id="checkbox-birth-#{index}", name="weight-#{index}").weight-form__checkbox-input
+								label(for="checkbox-birth-#{index}").weight-form__checkbox-label Беременны или были роды менее 6 месяцев назад?
 				.weight-form__column.weight-form__column_select
 					.weight-form__figure
 						.weight-form__figure-label Тип фигуры

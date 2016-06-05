@@ -2,4 +2,11 @@ include ../main-menu/main-menu
 mixin header()
 	header.header&attributes(attributes)
 		.header__holder
-			+main-menu(["Начало", "Наши цели", "Как это работает", "Подбор программы", "Личные задания", "Достижение цели", "Стоимость"], 1)
+			+main-menu([
+			{'title': 'Начало', 'link': '#change-time'}, 
+			{'title': 'Наши цели', 'link': '#advantages'}, 
+			{'title': 'Как это работает', 'link': '#how-it-works'}, 
+			{'title': 'Подбор программы', 'link': '#programs'}, 
+			{'title': 'Личные задания', 'link': '#tasks'},
+			{'title': 'Достижение цели', 'link': '#purpose'},
+			{'title': 'Стоимость', 'link': '#cost'}], 0)

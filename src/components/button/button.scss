@@ -10,9 +10,10 @@
 	border-bottom: 3px solid #b8a400;
 	font-weight: 700;
 	color: #000;
+	transition: all 0.2s;
 	&:hover {
 		color: #000;
-		background: darken($yellow-color, 2%);
+		background: darken($yellow-color, 3%);
 	}
 	&:focus, &:active {
 		border: 0;
@@ -21,5 +22,19 @@
 	&_inline {
 		display: inline-block;
 		vertical-align: top;
+		padding: 20px 55px 17px 55px;
+	}
+	&_light-red {
+		color: #fff;
+		background: #e73914;
+		border-color: #971a00;
+		&:hover {
+			color: #fff;
+			background: lighten(#e73914, 3%);
+		}
+		&:focus, &:active {
+			border: 0;
+			color: #fff;
+		}		
 	}
 }

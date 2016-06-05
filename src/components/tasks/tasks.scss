@@ -22,21 +22,142 @@
 		width: 550px;
 		margin: 0 auto;
 	}
+	&__notification {
+		margin-top: 30px; 
+		text-align: center;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
 	&__list {
-		height: 855px;
-		position: relative;
-		margin-top: 40px;
+		height: 835px;
+		position: relative; 
+		margin-top: 43px;
+		counter-reset: count;
 	}
 	&__label {
 		font-size: 22px;
 		font-weight: 700;
 		color: $yellow-color;
+		margin-bottom: 7px;
+		white-space: nowrap;
 	}
 	&__description {
 		font-size: 16px;
+		line-height: 1.3;
+		position: relative;
+		z-index: 2;
 	}
 	&__item {
 		text-align: center;
+		width: 310px;
+		position: absolute;
+		&:before {
+			counter-increment: count;
+			content: counter(count);
+			font-size: 160px;
+			font-weight: 700;
+			opacity: 0.2;
+			position: absolute;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 12px;
+			height: 12px;
+			background: #ffde00;
+			background: linear-gradient(to top, #ffbc00, #ffe800);
+			border-radius: 50%; 
+			box-shadow: 0 0 0 3px rgba(255, 255, 255, .3), 
+			inset 1px 0 4px rgba(0, 0, 0, .3);
+			z-index: 1;
+		}
+		&_one {
+			top: -9px;
+			left: 50%;
+			margin-left: -155px;
+			&:before {
+				right: 113px;
+				top: -78px;
+			}			
+			&:after {
+				bottom: -6px;
+				left: 50%;
+				margin-left: -6px;
+			}
+		}
+		&_two {
+			top: 160px;
+			left: 71px;
+			&:before {
+				left: 25px;
+				top: -78px;
+			}			
+			&:after {
+				top: 10px;
+				right: 15px;
+			}
+		}
+		&_three {
+			top: 430px;
+			left: -45px;
+			&:before {
+				left: 25px;
+				top: -72px;
+			}			
+			&:after {
+				top: 10px;
+				right: 15px;
+			}
+		}
+		&_four {
+			top: 635px;
+			left: 37px;
+			&:before {
+				left: -7px;
+				top: -59px;
+			}			
+			&:after {
+				top: 10px;
+				right: -8px;
+			}
+		}
+		&_five {
+			top: 635px;
+			right: 95px;
+			&:before {
+				right: 15px;
+				top: -59px;
+			}			
+			&:after {
+				top: 8px;
+				left: 50px;
+			}
+		}
+		&_six {
+			top: 428px;
+			right: -42px;
+			&:before {
+				right: 15px;
+				top: -59px;
+			}			
+			&:after {
+				top: 8px;
+				left: 15px; 
+			}
+		}
+		&_seven { 
+			top: 170px;
+			right: 17px;
+			&:before {
+				right: 15px;
+				top: -59px;
+			}			
+			&:after {
+				top: 8px;
+				left: -30px; 
+			}
+		}					
 	}	
 }
 

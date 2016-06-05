@@ -1,0 +1,21 @@
+include ../weight-form/weight-form
+mixin cost()
+	section.cost&attributes(attributes)
+		.cost__holder
+			h2.cost__title
+				strong.important.important_yellow Стоимость участия  1800 р.
+			.cost__text (за 50 дней и более, в зависимости от программы)
+		.cost__list
+			.cost__holder
+				.cost__row
+					.cost__column
+						.cost__item.cost__item_one
+							.cost__description Цена мечты равна цене одного похода в магазин
+					.cost__column.cost__column_middle
+						.cost__item.cost__item_two
+							.cost__description В 2-3 раза больше Вы потратили за последний год на неэффективные: чаи, белье для похудения, обруч и пр.
+					.cost__column
+						.cost__item.cost__item_three
+							.cost__description В 10 раз дешевле персонального тренера
+		.cost__holder
+			+weight-form('2')
