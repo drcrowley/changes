@@ -1,13 +1,20 @@
 .programs {
 	background: url(../images/programs.jpg) 50% 100% no-repeat;
 	height: 653px;
+	@include breakpoint(medium) {
+		background: url(../images/programs_bg.jpg) 50% 100% no-repeat;
+		background-size: cover;
+		height: auto;
+		border-top: 5px solid #fff;
+	}		
 	&__holder {
 		@include container;
 		padding-top: 25px;
 		padding-bottom: 25px;
+
 	}
 	&__title {
-		font-size: 33px;
+		@include rem(font-size, 33px);
 		font-weight: 300;
 		text-transform: uppercase;
 		text-align: center;
@@ -15,7 +22,7 @@
 	}
 	&__text {
 		text-align: center;
-		font-size: 22px;
+		@include rem(font-size, 22px);
 		font-weight: 300;
 	}
 

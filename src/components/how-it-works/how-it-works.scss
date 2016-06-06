@@ -1,13 +1,19 @@
 .how-it-works {
 	background: url(../images/how-it-works.jpg) 50% 100% no-repeat;
 	height: 1205px;
+	@include breakpoint(medium) {
+		background: url(../images/how-it-works_bg.jpg) 50% 100% no-repeat;
+		background-size: cover;
+		height: auto; 
+		border-top: 5px solid #fff;
+	}		
 	&__holder {
 		@include container;
 		padding-top: 60px;
 		padding-bottom: 60px;		
 	}
 	&__title {
-		font-size: 33px;
+		@include rem(font-size, 33px);
 		font-weight: 300;
 		text-transform: uppercase;
 		text-align: center;
@@ -20,9 +26,15 @@
 		&-item {
 			@include column(6);
 			position: relative;
-			font-size: 22px;
+			@include rem(font-size, 22px);
 			padding: 0 30px;
 			box-sizing: border-box;
+			@include breakpoint(medium) {
+				width: auto;
+				float: none;
+				display: block;
+				margin-bottom: 30px;
+			}	
 		}
 		&-text {
 			padding-left: 70px;
@@ -34,25 +46,32 @@
 		}
 	}
 	&__count {
-		font-size: 28px;
+		@include rem(font-size, 28px);
 		text-transform: uppercase;
 		color: $yellow-color;
 		font-weight: 700;
 		margin-bottom: 3px;
 	}
 	&__text {
-		font-size: 19px;
+		@include rem(font-size, 19px);
 	}
 	&__list {
 		margin-top: 160px;
 		height: 630px;
 		position: relative;
+		@include breakpoint(medium) {
+			height: auto;
+			margin-top: 30px;
+		}
 	}
 	&__line {
 		width: 270px;
 		height: 1px;
 		background: #fff;
 		position: absolute;
+		@include breakpoint(medium) {
+			display: none;
+		}		
 		&:after {
 			content: '';
 			display: block;
@@ -93,6 +112,14 @@
 			text-align: right;
 			top: 495px;
 			right: 0;
+		}
+		@include breakpoint(medium) {
+			position: static;
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 30px;
+			text-align: center;
 		}			
 	}
 	&__step_one &__line {

@@ -1,26 +1,13 @@
 .advantages {
 	background: url(../images/advantages.jpg) 50% 100% no-repeat;
-	// background-size: cover;
 	height: 548px;
-	// margin-top: -100px;
-	// clip-path: polygon(0 14%, 100% 0, 100% 86%, 0% 100%);
 	position: relative;
-	// &:before, &:after {
-	// 	content: '';
-	// 	display: block;
-	// 	right: 0;
-	// 	left: 0;
-	// 	height: 5px;
-	// 	background: #fff;
-	// 	position: absolute;
-	// 	transform: skewY(-3deg);
-	// }
-	// &:before {
-	// 	top: 60px;
-	// }
-	// &:after {
-	// 	bottom: 60px;
-	// }
+	@include breakpoint(medium) {
+		background: url(../images/advantages_bg.jpg) 50% 100% no-repeat;
+		background-size: cover;
+		height: auto;
+		border-top: 5px solid #fff;
+	}		
 	&__holder {
 		padding-top: 60px;
 		padding-bottom: 60px;
@@ -32,10 +19,13 @@
 		font-weight: 400;
 		text-transform: uppercase;
 		text-align: center;
-		font-size: 32px;
+		@include rem(font-size, 32px);
 		padding: 13px;
 		position: relative;
 		margin-bottom: 45px;
+		@include breakpoint(medium) {
+			@include rem(font-size, 24px);
+		}
 		&:before {
 			content: '';
 			position: absolute;
@@ -62,25 +52,18 @@
 	&__list {
 		font-size: 0;
 		@include clearfix();
-		margin-left: -15px;
-		margin-right: -15px;
 		counter-reset: count;
 		margin-bottom: 50px;
 	}
 	&__item {
-		display: inline-block;
-		vertical-align: bottom;
-		font-size: 20px;
+		@include rem(font-size, 20px);
 		font-weight: 700;
-		@include column(4);
 		box-sizing: border-box;
-		padding-left: 15px;
-		padding-right: 15px;
 		position: relative;
 		&:after {
 			counter-increment: count;
 			content: counter(count);
-			font-size: 170px;
+			@include rem(font-size, 170px);
 			font-weight: 500;
 			opacity: 0.1;
 			position: absolute;
@@ -124,6 +107,9 @@
 			width: 10px;
 			transform: skewY(-3deg);
 			background: #fff;
+			@include breakpoint(medium) {
+				display: none;
+			}			
 		}
 	}
 }

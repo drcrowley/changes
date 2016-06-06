@@ -1,7 +1,11 @@
 .change-time {
 	background: url(../images/change-time.jpg) 50% 100% no-repeat;
-	// background-size: cover;
 	height: 985px;
+	@include breakpoint(medium) {
+		background: url(../images/change-time_bg.jpg) 50% 100% no-repeat;
+		background-size: cover;
+		height: auto; 
+	}
 	&__holder {
 		padding-top: 130px;
 		padding-bottom: 130px;
@@ -20,7 +24,7 @@
 		margin-top: 30px;
 	}
 	&__text {
-		font-size: 33px;
+		@include rem(font-size, 33px);
 		font-weight: 400;
 	}
 	&__title {

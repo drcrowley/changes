@@ -1,29 +1,36 @@
 .creators {
 	background: url(../images/creators.jpg) 50% 100% no-repeat;
 	height: 553px;
+	border-top: 5px solid #fff;
+	@include breakpoint(medium) {
+		background: url(../images/creators_bg.jpg) 50% 100% no-repeat;
+		background-size: cover;
+		height: auto; 
+	}	
 	&__holder {
 		@include container;
 		padding-top: 25px;
 		padding-bottom: 25px;
 	}
 	&__title {
-		font-size: 33px;
+		@include rem(font-size, 33px);
 		font-weight: 300;
 		text-transform: uppercase;
 		text-align: center;
-		margin-bottom: 120px;
+		margin-bottom: 110px;
+		@include breakpoint(medium) {
+			margin-bottom: 80px;
+		}		
 	}
 	&__row {
 		@include clearfix();
 	}
-	&__image {
-		float: left;
-	}
+
 	&__list {
 		overflow: hidden;
 	}
 	&__item {
-		font-size: 28px;
+		@include rem(font-size, 28px);
 		position: relative;
 		padding-left: 30px;
 		&:after {
@@ -46,6 +53,11 @@
 		float: left;
 		margin-right: 140px; 
 		margin-top: 15px;
+		@include breakpoint(medium) {
+			float: none;
+			margin-bottom: 50px;
+			text-align: center;
+		}		
 		&:after {
 			content: '';
 			border: 10px solid $yellow-color;

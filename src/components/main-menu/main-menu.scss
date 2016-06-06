@@ -11,13 +11,23 @@
 			content: '';
 			display: inline-block;
 		}
+		@include breakpoint(medium) {
+			text-align: left;
+			&:after {
+				display: none;
+			}
+		}	
 	}
 	&__item {
-		font-size: 14px;
+		@include rem(font-size, 14px);
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
 		line-height: 1.4;
+		@include breakpoint(medium) {
+			margin-right: 10px;
+			margin-left: 10px;
+		}
 		&_active:after {
 			content: '';
 			position: absolute;

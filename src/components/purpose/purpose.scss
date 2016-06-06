@@ -1,13 +1,19 @@
 .purpose {
 	background: url(../images/purpose.jpg) 50% 100% no-repeat;
 	height: 921px;
+	@include breakpoint(medium) {
+		background: url(../images/purpose_bg.jpg) 50% 100% no-repeat;
+		background-size: cover;
+		height: auto; 
+		border-top: 5px solid #fff;
+	}		
 	&__holder {
 		@include container;
 		padding-top: 50px;
 		padding-bottom: 50px;		
 	}
 	&__title {
-		font-size: 33px;
+		@include rem(font-size, 33px);
 		font-weight: 300;
 		text-transform: uppercase;
 		text-align: center;
@@ -15,7 +21,7 @@
 	}
 	&__text {
 		text-align: center;
-		font-size: 22px;
+		@include rem(font-size, 22px);
 		font-weight: 300;
 	}
 	&__list {
@@ -31,6 +37,12 @@
 		padding-left: 25px;
 		padding-right: 25px;
 		box-sizing: border-box;
+		@include breakpoint(medium) {
+			float: none;
+			display: block;
+			width: 100%;
+			margin-bottom: 30px;
+		}
 	}
 	&__item {
 		background: #fff;
@@ -50,13 +62,16 @@
 		}
 	}
 	&__label {
-		font-size: 28px;
+		@include rem(font-size, 28px);
 		font-weight: 700;
 		padding: 15px 40px 20px 40px;
 		color: $red-color;
 		white-space: nowrap;
 		position: relative;
 		z-index: 2;
+		@include breakpoint(wide) {
+			@include rem(font-size, 22px);
+		}			
 		&:after {
 			content: '';
 			position: absolute;
@@ -70,7 +85,7 @@
 	}
 	&__detail {
 		text-transform: uppercase;
-		font-size: 16px;
+		@include rem(font-size, 16px);
 		font-weight: 700;
 		background: #f3f3f3;
 		display: block;
@@ -96,5 +111,10 @@
 		p + p {
 			margin-top: 1em;
 		}
+		@include breakpoint(wide) {
+			p + p {
+				margin-top: 0.5em; 
+			}
+		}			
 	}
 }

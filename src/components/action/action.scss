@@ -2,27 +2,33 @@
 	background: url(../images/action.jpg) 50% 100% no-repeat;
 	height: 399px;
 	color: #000;
+	@include breakpoint(medium) {
+		background: url(../images/action_bg.jpg) 50% 100% no-repeat;
+		background-size: cover;
+		height: auto;
+		border-top: 5px solid #fff;
+	}	
 	&__holder {
-		padding-top: 30px;
-		padding-bottom: 30px;
+		padding-top: 20px;
+		padding-bottom: 20px;
 		@include container;
 	}
 	&__title {
-		font-size: 33px;
+		@include rem(font-size, 33px);
 		text-align: center;
 		margin-bottom: 22px;
 		text-transform: uppercase;
 	}
 	&__text {
 		text-align: center;
-		font-size: 30px;
+		@include rem(font-size, 30px);
 		font-weight: 300;
 		margin-bottom: 20px;
 		text-transform: uppercase;
 	}
 	&__description {
 		text-align: center;
-		font-size: 21px;
+		@include rem(font-size, 21px);
 		font-weight: 300;
 	}
 	&__button {

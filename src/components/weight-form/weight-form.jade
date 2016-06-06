@@ -3,23 +3,23 @@ include ../button/button
 mixin weight-form(index)
 	form.weight-form&attributes(attributes)
 		.weight-form__title Узнайте БЕСПЛАТНО свой идеальный вес. Внесите свои данные
-		.weight-form__row
-			.weight-form__column.weight-form__column_3
+		.row
+			.col-md-3
 				.weight-form__field
 					.weight-form__icon
 						i.icon.icon_person
 					input(type="name", placeholder="Ваше имя").weight-form__input
-			.weight-form__column.weight-form__column_3
+			.col-md-3
 				.weight-form__field
 					.weight-form__icon
 						i.icon.icon_email
 					input(type="email", placeholder="Email").weight-form__input
-			.weight-form__column.weight-form__column_3
+			.col-md-3
 				.weight-form__field
 					.weight-form__icon
 						i.icon.icon_weight
 					input(type="text", placeholder="Ваш вес").weight-form__input
-			.weight-form__column.weight-form__column_3
+			.col-md-3
 				.weight-form__field
 					.weight-form__icon
 						i.icon.icon_height
