@@ -1,0 +1,5 @@
+.tasks__item:before, 
+.advantages__item:after, 
+.cost__item:before {
+	display: none;
+}

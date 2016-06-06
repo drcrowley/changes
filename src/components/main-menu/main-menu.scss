@@ -1,6 +1,7 @@
 .main-menu {
 	&__list {
-		font-size: 0;
+		font-size: 1px;
+		line-height: 0;
 		text-align: justify;
 		&:after {
 			width: 100%;
@@ -16,6 +17,7 @@
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
+		line-height: 1.4;
 		&_active:after {
 			content: '';
 			position: absolute;
@@ -27,9 +29,9 @@
 			background: $yellow-color;
 		}
 	}
-	&__item + &__item {
-		margin-left: 10px;
-	}
+	// &__item + &__item {
+	// 	margin-left: 10px;
+	// }
 	&__link {
 		display: block;
 		padding: 15px 0;

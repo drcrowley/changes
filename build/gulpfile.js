@@ -56,7 +56,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('styles:prod', function () {
-	return gulp.src('../src/styles/style.css')
+	return gulp.src(['../src/styles/style.css', '../src/styles/style-ie8.css'])
 	.pipe(cleancss())
 	.pipe(gulp.dest('../dist/styles'))
 	.pipe(notify({ message: 'Styles task complete' }));
