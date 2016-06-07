@@ -9,6 +9,7 @@ var gulp = require('gulp'),
 	sassGlob = require('gulp-sass-glob'),
 	sourcemaps = require('gulp-sourcemaps'),
 	autoprefixer = require('gulp-autoprefixer'),
+	csscomb = require('gulp-csscomb'),
 	cleancss = require('gulp-clean-css'),
 	jshint = require('gulp-jshint'),
 	uglify = require('gulp-uglify'),
@@ -49,6 +50,7 @@ gulp.task('styles', function () {
 	.pipe(sass().on('error', sass.logError))
 	.pipe(rename('style.css'))
 	.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+	.pipe(csscomb())
 	.pipe(sourcemaps.write('./maps'))
 	.pipe(gulp.dest('../src/styles'))
 	.pipe(browserSync.stream())
@@ -64,18 +66,18 @@ gulp.task('styles:prod', function () {
 
 // Scripts
 gulp.task('scripts', ['clean-scripts', 'lint'], function () {
-	return gulp.src(['../src/scripts/vendor/jquery.js', '../src/scripts/vendor/*.js', '../src/components/**/*.js' ])
+	return gulp.src(['../src/components/**/*.js' ])
 	.pipe(sourcemaps.init())
 	.pipe(concat('main.js'))
 	.pipe(sourcemaps.write('./maps'))
-	.pipe(gulp.dest('../src/scripts'))
+	.pipe(gulp.dest('../src/js'))
 	.pipe(notify({ message: 'Scripts task complete' }));
 });
 
 gulp.task('scripts:prod', function () {
-	return gulp.src('../src/scripts/main.js')
+	return gulp.src('../src/js/main.js')
 	.pipe(uglify())
-	.pipe(gulp.dest('../dist/scripts'))
+	.pipe(gulp.dest('../dist/js'))
 	.pipe(notify({ message: 'Scripts task complete' }));
 });
 
@@ -106,6 +108,12 @@ gulp.task('images', function () {
 });
 
 gulp.task('move', function () {
+	gulp.src(['../src/styles/*.css'])
+	.pipe(gulp.dest('../dist/styles'))
+
+	gulp.src(['../src/js/*.js'])
+	.pipe(gulp.dest('../dist/js'))	
+
 	gulp.src(['../src/uploads/*'])
 	.pipe(gulp.dest('../dist/uploads'))
 
@@ -156,7 +164,7 @@ gulp.task('default', function () {
 
 // Production
 gulp.task('production', ['clean-dist'], function() {
-	gulp.start('styles:prod', 'scripts:prod', 'images', 'move');
+	gulp.start('images', 'move');
 });
 
 // Create block
